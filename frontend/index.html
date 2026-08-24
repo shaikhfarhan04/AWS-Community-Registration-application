@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Community Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>AWS Community Registration</h1>
+            <p>Join the AWS community and connect with cloud enthusiasts.</p>
+        </div>
+
+        <form id="registrationForm">
+
+            <div class="form-section">
+                <h2>Personal Information</h2>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number *</label>
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="9876543210"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter your city"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            placeholder="Enter your country"
+                            required>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h2>Professional Information</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Job Role</label>
+                        <input
+                            type="text"
+                            id="role"
+                            name="role"
+                            placeholder="DevOps Engineer">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="experience">
+                        Years of Experience
+                    </label>
+
+                    <select id="experience" name="experience">
+
+                        <option value="">
+                            Select experience
+                        </option>
+
+                        <option value="0-1">
+                            0 - 1 Year
+                        </option>
+
+                        <option value="1-3">
+                            1 - 3 Years
+                        </option>
+
+                        <option value="3-5">
+                            3 - 5 Years
+                        </option>
+
+                        <option value="5-10">
+                            5 - 10 Years
+                        </option>
+
+                        <option value="10+">
+                            10+ Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h2>AWS Skills</h2>
+
+                <p class="help-text">
+                    Select the AWS technologies you are familiar with.
+                </p>
+
+                <div class="checkbox-grid">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="EC2">
+                        EC2
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="S3">
+                        S3
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="VPC">
+                        VPC
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Lambda">
+                        Lambda
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="RDS">
+                        RDS
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="EKS">
+                        EKS
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Docker">
+                        Docker
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Kubernetes">
+                        Kubernetes
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Terraform">
+                        Terraform
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Jenkins">
+                        Jenkins
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h2>Community Information</h2>
+
+                <div class="form-group">
+
+                    <label for="community">
+                        Community Type *
+                    </label>
+
+                    <select
+                        id="community"
+                        name="community"
+                        required>
+
+                        <option value="">
+                            Select community
+                        </option>
+
+                        <option value="AWS User Group">
+                            AWS User Group
+                        </option>
+
+                        <option value="AWS Meetup">
+                            AWS Meetup
+                        </option>
+
+                        <option value="AWS Workshop">
+                            AWS Workshop
+                        </option>
+
+                        <option value="AWS Community Day">
+                            AWS Community Day
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="comments">
+                        Comments
+                    </label>
+
+                    <textarea
+                        id="comments"
+                        name="comments"
+                        rows="5"
+                        placeholder="Tell us why you want to join the AWS community..."></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section agreement">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required>
+
+                    I agree to participate in the AWS community.
+
+                </label>
+
+            </div>
+
+
+            <button type="submit">
+                Register Now
+            </button>
+
+            <div id="message"></div>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
