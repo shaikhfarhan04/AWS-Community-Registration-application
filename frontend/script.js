@@ -1,7 +1,7 @@
 const form = document.getElementById("registrationForm");
 const message = document.getElementById("message");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
@@ -11,8 +11,10 @@ form.addEventListener("submit", function (event) {
 
     if (!name || !email || !mobile) {
 
-        message.style.display = "block";
-        message.textContent = "Please fill all required fields.";
+        showMessage(
+            "Please fill all required fields.",
+            "error"
+        );
 
         return;
     }
@@ -27,18 +29,100 @@ form.addEventListener("submit", function (event) {
 
         });
 
-    console.log("Registration Data:");
 
-    console.log({
+    const registrationData = {
+
         name: name,
+
         email: email,
+
         mobile: mobile,
-        skills: selectedSkills
-    });
+
+        city: document.getElementById("city").value.trim(),
+
+        country: document.getElementById("country").value.trim(),
+
+        company: document.getElementById("company").value.trim(),
+
+        role: document.getElementById("role").value.trim(),
+
+        experience: document.getElementById("experience").value,
+
+        skills: selectedSkills,
+
+        community: document.getElementById("community").value,
+
+        comments: document.getElementById("comments").value.trim()
+    };
+
+
+    try {
+
+        const response = await fetch(
+            "/api/register",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(registrationData)
+            }
+        );
+
+
+        const result = await response.json();
+
+
+        if (response.ok) {
+
+            showMessage(
+                result.message,
+                "success"
+            );
+
+            form.reset();
+
+        } else {
+
+            showMessage(
+                result.message,
+                "error"
+            );
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        showMessage(
+            "Unable to connect to the backend server.",
+            "error"
+        );
+
+    }
+
+});
+
+
+function showMessage(text, type) {
 
     message.style.display = "block";
-    message.textContent =
-        "Registration form submitted successfully!";
 
-    form.reset();
-});
+    message.textContent = text;
+
+    if (type === "success") {
+
+        message.style.backgroundColor = "#d1fae5";
+        message.style.color = "#065f46";
+
+    } else {
+
+        message.style.backgroundColor = "#fee2e2";
+        message.style.color = "#991b1b";
+
+    }
+
+}

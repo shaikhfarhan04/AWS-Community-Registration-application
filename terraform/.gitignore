@@ -1,12 +1,7 @@
-.env
-*.pem
-
-venv/
-__pycache__/
-*.pyc
-
 .terraform/
 terraform.tfstate
 terraform.tfstate.*
-
-*.tfvars
+terraform.tfvars
+*.tfplan
+crash.log
+crash.*.log
