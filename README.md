@@ -1,4 +1,4 @@
-Yes. A good project for this is an **AWS Community Registration application** with:
+**AWS Community Registration application**
 
 * Frontend: HTML/CSS/JavaScript
 * Backend: Python Flask
